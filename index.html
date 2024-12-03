@@ -1,6 +1,27 @@
 <html>
 <head>
   <style>
+  
+  #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgb(217, 0, 0);
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: rgb(255, 225, 7);
+}
+  
      body{
          text-align: center;
          background-image: radial-gradient(rgb(255, 0, 0), rgb(0,0,0));
@@ -19,7 +40,7 @@
 </head>
 
 <body>
-<h1 style="font-size:60px;">Manchester United</h1>
+<marquee><h1 style="font-size:60px;">Manchester United</h1></marquee>
 <h2>This is an example</h2>
 <img src="https://static0.givemesportimages.com/wordpress/wp-content/uploads/2024/04/manchester-united-s-best-players-this-season-ranked-from-best-to-worst-02.jpg" width="500px">
 
@@ -31,6 +52,31 @@ The Busby Babes
 The "Busby Babes" were the group of footballers, recruited and trained by Manchester United<br> chief scout Joe Armstrong and assistant manager Jimmy Murphy,<br>  who progressed from the club's youth team into the first team under the management of the eponymous Matt Busby from<br>  the late 1940s and throughout the 1950s. The squad most associated with the name<br>  "babes" was that of the 1957–58 season, many of whom died in the 1958 Munich air disaster, and who, with an average age <br> of 22, had been touted to dominate European football for the next few years.
 </p>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kAK2ouHNLYI?si=HEgn6C4i02FBtEp6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 
 </body>
 
